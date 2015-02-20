@@ -21,11 +21,35 @@ assertthat::on_failure(valid_columns) <- function(call, env){
 
 #----------------------------------------------------------------------------
 
+
+#' Factor labels to lower (or upper) case.
+#'
+#' \code{lower_factors} acts on columns of a data frame and converts factor
+#' labels to lower case (by default) or upper case (with case = "upper").
+#' \code{lower_factors} plays nice with \code{\%>\%} from dplyr/magrittr.
+#' 
+#' @param .data A data frame.
+#' @param ... Comma separated list of unquoted expressions. Defaults to all
+#' columns of class factor.
+#' @param case A character vector \code{"upper"} or \code{"lower"} (default). 
+#' Note: case must be a named argument if specified 
+#' (e.g. \code{case = "upper"}).
+#' @return A data frame.
+#' @examples
+#' lower_factors(iris, Species, case = "upper")
+#' 
+#' # Lower case is default
+#' lower_factors(iris)
+#' 
+#' # Standard Evaluation with lower_factors_
+#' lower_factors_(iris, ~Species, case = "upper")
+#' @family case functions
 lower_factors <- function(.data, ..., case = "lower"){
   dots = lazyeval::lazy_dots(...)
   if (length(dots) == 0) dots <- names(.data)[which(sapply(.data, is.factor))]
   lower_factors_(.data, .dots = dots, case = case)
 }
+
 
 lower_factors_ <- function(.data, ..., .dots, case = "lower"){
   alldots <- lazyeval::all_dots(.dots, ...)
@@ -55,6 +79,32 @@ lower_factor_ <- function(.data, case){
 
 # ------------------------------------------------------------------------------
 
+
+#' Convert column names to lower (or upper) case.
+#'
+#' \code{lower_names} acts on the column names of a data frame and converts 
+#' them to lower case (by default) or upper case (with case = "upper").
+#' \code{lower_names} plays nice with \code{\%>\%} from dplyr/magrittr.
+#' 
+#' @param .data A data frame.
+#' @param ... Comma separated list of unquoted expressions. Defaults to all
+#' columns.
+#' @param case A character vector \code{"upper"} or \code{"lower"} (default). 
+#' Note: case must be a named argument if specified 
+#' (e.g. \code{case = "upper"}).
+#' @return A data frame.
+#' @examples
+#' lower_names(iris, case = "upper")
+#' 
+#' # Lower case is default
+#' lower_factors(iris)
+#' 
+#' #Specific columns
+#' lower_names(iris, Sepal.Length, Species)
+#' 
+#' # Standard Evaluation with lower_names_
+#' lower_factors_(iris, ~Species, case = "upper")
+#' @family case functions
 lower_names <- function(.data, ..., case = "lower"){
   dots <- lazyeval::lazy_dots(...)
   if (length(dots) == 0) dots <- names(.data)

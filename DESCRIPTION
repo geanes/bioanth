@@ -10,3 +10,5 @@ BugReports: https://github.com/geanes/bioanth/issues
 License: GPL-3
 Imports: assertthat,
     lazyeval
+Suggests: magrittr,
+    dplyr
