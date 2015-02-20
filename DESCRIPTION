@@ -8,4 +8,5 @@ Authors@R: as.person("Glenn Eanes <glenn.eanes@gmail.com> [aut, cre]")
 URL: https://github.com/geanes/bioanth
 BugReports: https://github.com/geanes/bioanth/issues
 License: GPL-3
-Imports: assertthat
+Imports: assertthat,
+    lazyeval
