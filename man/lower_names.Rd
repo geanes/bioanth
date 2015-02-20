@@ -2,7 +2,7 @@
 % Please edit documentation in R/cases.R
 \name{lower_names}
 \alias{lower_names}
-\title{Convert column names to lower (or upper) case.}
+\title{Column names to lower (or upper) case.}
 \usage{
 lower_names(.data, ..., case = "lower")
 }

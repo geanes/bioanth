@@ -80,7 +80,7 @@ lower_factor_ <- function(.data, case){
 # ------------------------------------------------------------------------------
 
 
-#' Convert column names to lower (or upper) case.
+#' Column names to lower (or upper) case.
 #'
 #' \code{lower_names} acts on the column names of a data frame and converts 
 #' them to lower case (by default) or upper case (with case = "upper").
