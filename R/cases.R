@@ -1,24 +1,34 @@
-colnames_case <- function(data, cols = names(data), case = "lower"){
-  names(data) <- tolower(names(data))
+all_factors <- function(data, cols){
+  all(sapply(cols, function(x) is.factor(data[[x]])))
+}
+
+assertthat::on_failure(all_factors) <- function(call, env){
+  paste0("cols must be factors")
 }
 
 
-factor_case <- function(data, col, case = "lower"){
-#  stopifnot(is.data.frame(data), is.factor(data$col), is.character(case))
+lower_factor <- function(data, col, case = "lower"){
   if (case == "upper"){
     levels(data[[col]]) <- toupper(levels(data[[col]]))
   } else{
     levels(data[[col]]) <- tolower(levels(data[[col]]))
   }
+  return(data[[col]])
+}
+
+
+lower_factors <- function(data, cols = which(sapply(data, is.factor)), case = "lower"){
+  assertthat::assert_that(is.data.frame(data))
+  assertthat::assert_that(all_factors(data, cols))
+  assertthat::assert_that(is.character(case))
+  
+  for (i in cols) {
+    data[[i]] <- factor_case(data, i, case = case)
+  }
   return(data)
 }
 
-factor_cases <- function(data, cols){
-  factor_list <- names(data[which(sapply(data, is.factor))])
-  
-}
 
-
-lower_chars <- function(data, cols){
-  
+lower_names <- function(data, cols = names(data), case = "lower"){
+  names(data) <- tolower(names(data))
 }
