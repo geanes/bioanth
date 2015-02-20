@@ -1,9 +1,11 @@
 Package: bioanth
 Type: Package
-Title: What the package does (short line)
-Version: 1.0
+Title: Datasets useful in Biological Anthropology
+Description: Datasets useful in Biological Anthropology and utility functions to work with them.
+Version: 0.0.0.9000
 Date: 2015-02-19
-Author: Who wrote it
-Maintainer: Who to complain to <yourfault@somewhere.net>
-Description: More about what it does (maybe more than one line)
-License: What license is it under?
+Authors@R: as.person("Glenn Eanes <glenn.eanes@gmail.com> [aut, cre]")
+URL: https://github.com/geanes/bioanth
+BugReports: https://github.com/geanes/bioanth/issues
+License: GPL-3
+Imports: assertthat
