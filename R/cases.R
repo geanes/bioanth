@@ -11,7 +11,7 @@ dots_exist <- function(dots){
   length(dots) != 0
 }
 assertthat::on_failure(dots_exist) <- function(call, env){
-  paste0("columns must be specified for standard evaluation")
+  paste0("no columns specified")
 }
 
 valid_columns <- function(data, dots){
@@ -48,7 +48,7 @@ assertthat::on_failure(valid_columns) <- function(call, env){
 #' @family case functions
 #' @export
 lower_factors <- function(.data, ..., case = "lower"){
-  dots = lazyeval::lazy_dots(...)
+  dots <- lazyeval::lazy_dots(...)
   if (length(dots) == 0) dots <- names(.data)[which(sapply(.data, is.factor))]
   lower_factors_(.data, .dots = dots, case = case)
 }
@@ -56,27 +56,28 @@ lower_factors <- function(.data, ..., case = "lower"){
 #' @export
 lower_factors_ <- function(.data, ..., .dots, case = "lower"){
   alldots <- lazyeval::all_dots(.dots, ...)
-  cols <- lazyeval::lazy_eval(alldots, .data)
+  cols_pos <- setNames(as.list(seq_along(.data)), names(.data))
+  cols <- unlist(lazyeval::lazy_eval(alldots, cols_pos))
   assertthat::assert_that(is.data.frame(.data))
   assertthat::assert_that(dots_exist(alldots))
-  assertthat::assert_that(valid_columns(.data, alldots))
-  assertthat::assert_that(all_factors(cols))
+  assertthat::assert_that(all_factors(.data[, cols]))
   assertthat::assert_that(is.character(case))
-  
-  for (i in alldots) {
-    .data[[as.character(i$expr)]] <- lower_factor_(.data = lazyeval::lazy_eval(i, .data), case = case)
+  new_data <- .data[, cols, drop = FALSE]
+  new_cols <- names(new_data)
+  for (i in new_cols) {
+    levels(.data[[i]]) <- lower_factor_(x = levels(.data[[i]]), case = case)
   }
   return(.data)
 }
 
 
-lower_factor_ <- function(.data, case){
+lower_factor_ <- function(x, case){
   if (case == "upper"){
-    levels(.data) <- toupper(levels(.data))
+    new_levels <- toupper(x)
   } else{
-    levels(.data) <- tolower(levels(.data))
+    new_levels <- tolower(x)
   }
-  return(.data)
+  return(new_levels)
 }
 
 
