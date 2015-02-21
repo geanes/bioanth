@@ -119,10 +119,10 @@ lower_names <- function(.data, ..., case = "lower"){
 lower_names_ <- function(.data, ..., .dots, case = "lower"){
   alldots <- lazyeval::all_dots(.dots, ...)
   assertthat::assert_that(is.data.frame(.data))
-  assertthat::assert_that(valid_columns(.data, alldots))
   assertthat::assert_that(dots_exist(alldots))
   assertthat::assert_that(is.character(case))
-  cols <- sapply(alldots, function(x) which(names(.data) == as.character(x$expr)))
+  cols_pos <- setNames(as.list(seq_along(.data)), names(.data))
+  cols <- unlist(lazyeval::lazy_eval(alldots, cols_pos))
   if (case == "upper"){
     names(.data)[cols] <- toupper(names(.data)[cols])
   } else {
