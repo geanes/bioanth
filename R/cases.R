@@ -1,3 +1,5 @@
+# Assertions --------------------------------------------------------------
+
 all_factors <- function(cols){
   all(sapply(cols, is.factor))
 }
@@ -19,7 +21,7 @@ assertthat::on_failure(valid_columns) <- function(call, env){
   paste0("columns specified do not match data")
 }
 
-#----------------------------------------------------------------------------
+# Factor case --------------------------------------------------------------
 
 
 #' Factor labels to lower (or upper) case.
@@ -44,13 +46,14 @@ assertthat::on_failure(valid_columns) <- function(call, env){
 #' # Standard Evaluation with lower_factors_
 #' lower_factors_(iris, ~Species, case = "upper")
 #' @family case functions
+#' @export
 lower_factors <- function(.data, ..., case = "lower"){
   dots = lazyeval::lazy_dots(...)
   if (length(dots) == 0) dots <- names(.data)[which(sapply(.data, is.factor))]
   lower_factors_(.data, .dots = dots, case = case)
 }
 
-
+#' @export
 lower_factors_ <- function(.data, ..., .dots, case = "lower"){
   alldots <- lazyeval::all_dots(.dots, ...)
   cols <- lazyeval::lazy_eval(alldots, .data)
@@ -77,7 +80,7 @@ lower_factor_ <- function(.data, case){
 }
 
 
-# ------------------------------------------------------------------------------
+# Column name case ----------------------------------------------------------
 
 
 #' Column names to lower (or upper) case.
@@ -105,13 +108,14 @@ lower_factor_ <- function(.data, case){
 #' # Standard Evaluation with lower_names_
 #' lower_factors_(iris, ~Species, case = "upper")
 #' @family case functions
+#' @export
 lower_names <- function(.data, ..., case = "lower"){
   dots <- lazyeval::lazy_dots(...)
   if (length(dots) == 0) dots <- names(.data)
   lower_names_(.data, .dots = dots, case = case)
 }
 
-
+#' @export
 lower_names_ <- function(.data, ..., .dots, case = "lower"){
   alldots <- lazyeval::all_dots(.dots, ...)
   assertthat::assert_that(is.data.frame(.data))
