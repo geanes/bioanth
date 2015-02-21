@@ -1,0 +1,5 @@
+howell <- read.csv("~/stats/bioanth/inst/extdata/howell.csv", stringsAsFactors=FALSE)
+howell$Sex <- factor(howell$Sex)
+howell$Population <- factor(howell$Population)
+howell$PopNum <- factor(howell$PopNum)
+howell <- dplyr::tbl_df(howell)
