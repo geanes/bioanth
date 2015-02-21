@@ -1,4 +1,5 @@
-howell <- read.csv("~/stats/bioanth/inst/extdata/howell.csv", stringsAsFactors=FALSE)
+raw <- system.file("extdata", "howell.csv", package = "bioanth")
+howell <- read.csv(raw, stringsAsFactors=FALSE)
 howell$Sex <- factor(howell$Sex)
 howell$Population <- factor(howell$Population)
 howell$PopNum <- factor(howell$PopNum)
