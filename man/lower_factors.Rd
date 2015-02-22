@@ -34,6 +34,7 @@ lower_factors(iris)
 lower_factors_(iris, ~Species, case = "upper")
 }
 \seealso{
-Other case.functions: \code{\link{lower_names}}
+Other case functions: \code{\link{lower_factors_}};
+  \code{\link{lower_names_}}; \code{\link{lower_names}}
 }
 

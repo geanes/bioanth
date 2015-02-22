@@ -37,6 +37,7 @@ lower_names(iris, Sepal.Length, Species)
 lower_factors_(iris, ~Species, case = "upper")
 }
 \seealso{
-Other case.functions: \code{\link{lower_factors}}
+Other case functions: \code{\link{lower_factors_}};
+  \code{\link{lower_factors}}; \code{\link{lower_names_}}
 }
 

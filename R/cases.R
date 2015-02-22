@@ -53,6 +53,16 @@ lower_factors <- function(.data, ..., case = "lower"){
   lower_factors_(.data, .dots = dots, case = case)
 }
 
+#' Factor labels to lower (or upper) case Standard Evaluation.
+#'
+#' \code{lower_factors_} is the standard evaluation version of 
+#' \code{lower_factors}. Dots arguments should be quoted with ~. This function
+#' is mostly for use in programming.
+#' 
+#' @return A data frame.
+#' @examples
+#' lower_factors_(iris, ~Species, case = "upper")
+#' @family case functions
 #' @export
 lower_factors_ <- function(.data, ..., .dots, case = "lower"){
   alldots <- lazyeval::all_dots(.dots, ...)
@@ -115,6 +125,16 @@ lower_names <- function(.data, ..., case = "lower"){
   lower_names_(.data, .dots = dots, case = case)
 }
 
+#' Column names to lower (or upper) case Standard Evaluation.
+#'
+#' \code{lower_names_} is the standard evaluation version of \code{lower_names}.
+#' Dots arguments should be quoted with ~. This function is mostly for
+#' use in programming.
+#' 
+#' @return A data frame.
+#' @examples
+#' lower_names_(iris, ~Sepal.Length, ~Species)
+#' @family case functions
 #' @export
 lower_names_ <- function(.data, ..., .dots, case = "lower"){
   alldots <- lazyeval::all_dots(.dots, ...)
