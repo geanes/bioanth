@@ -13,8 +13,17 @@ dataframes.
 \details{
 This package contains the following datasets:
 \itemize{
-  \item Howell's craniometrics
-  \item Goldman
+  \item \code{howell}: Howells Craniometric Data Set
+  \item \code{howelltest}: Howells Craniometric Test Data Set
+  \item \code{goldman}: Goldman Osteometric Data Set
+}
+
+and the following functions:
+\itemize{
+  \item \code{lower_names}: Converts column names of a data frame to
+    lower (or upper) case.
+  \item \code{lower_factors}: Converts factor labels to
+    lower (or upper) case.
 }
 }
 
