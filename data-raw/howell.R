@@ -1,6 +1,15 @@
-raw <- system.file("extdata", "howell.csv", package = "bioanth")
+library(dplyr)
+library(magrittr)
+
+# Load data ---------------------------------------------------------------
+raw <- "inst/extdata/howell.csv"
 howell <- read.csv(raw, stringsAsFactors=FALSE)
-howell$Sex <- factor(howell$Sex)
-howell$Population <- factor(howell$Population)
-howell$PopNum <- factor(howell$PopNum)
-howell <- dplyr::tbl_df(howell)
+
+# Make factors ------------------------------------------------------------
+howell$Sex %<>% factor
+howell$Population %<>% factor
+howell$PopNum %<>% factor
+
+# Save --------------------------------------------------------------------
+howell %<>% tbl_df
+save(howell, file = "data/howell.rda")

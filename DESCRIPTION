@@ -1,7 +1,8 @@
 Package: bioanth
 Type: Package
 Title: Datasets useful in Biological Anthropology
-Description: Datasets useful in Biological Anthropology and utility functions to work with them.
+Description: Datasets useful in Biological Anthropology and utility functions 
+    to work with them.
 Version: 0.0.0.9000
 Date: 2015-02-19
 Authors@R: as.person("Glenn Eanes <glenn.eanes@gmail.com> [aut, cre]")

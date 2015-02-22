@@ -1,6 +1,15 @@
-raw <- system.file("extdata", "howelltest.csv", package = "bioanth")
+library(dplyr)
+library(magrittr)
+
+# Import data ----------------------------------------------------------------
+raw <- "inst/extdata/howelltest.csv"
 howelltest <- read.csv(raw, stringsAsFactors=FALSE)
-howelltest$Sex <- factor(howelltest$Sex)
-howelltest$Tribe <- factor(howelltest$Tribe)
-howelltest <- dplyr::tbl_df(howelltest)
+
+# Make factors --------------------------------------------------------------
+howelltest$Sex %<>% factor
+howelltest$Tribe %<>% factor
+
+# Save ---------------------------------------------------------------------
+howelltest %<>% tbl_df
+save(howelltest, file = "data/howelltest.rda")
 

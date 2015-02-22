@@ -62,8 +62,7 @@ lower_factors_ <- function(.data, ..., .dots, case = "lower"){
   assertthat::assert_that(dots_exist(alldots))
   assertthat::assert_that(all_factors(.data[, cols]))
   assertthat::assert_that(is.character(case))
-  new_data <- .data[, cols, drop = FALSE]
-  new_cols <- names(new_data)
+  new_cols <- names(.data[, cols, drop = FALSE])
   for (i in new_cols) {
     levels(.data[[i]]) <- lower_factor_(x = levels(.data[[i]]), case = case)
   }
