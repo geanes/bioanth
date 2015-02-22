@@ -115,20 +115,25 @@ and radii.
 
 \section{Citation}{
 
-Howells WW. 1973. Cranial Variation in Man. A Study by Multivariate Analysis
-of Patterns of Differences Among Recent Human Populations.
-Papers of the Peabody Museum of Archeology and Ethnology, vol. 67, pp. 259.
-Cambridge, Mass.: Peabody Museum.
+\itemize{
+  \item Howells WW. 1973. Cranial Variation in Man. A Study by Multivariate
+    Analysis of Patterns of Differences Among Recent Human Populations.
+    Papers of the Peabody Museum of Archeology and Ethnology, vol. 67,
+    pp. 259.
+    Cambridge, Mass.: Peabody Museum.
 
-Howells WW. 1989. Skull Shapes and the Map. Craniometric Analyses in the
-Dispersion of Modern Homo.
-Papers of the Peabody Museum of Archaeology and Ethnology, vol. 79, pp. 189.
-Cambridge, Mass.: Peabody Museum.
+  \item Howells WW. 1989. Skull Shapes and the Map. Craniometric Analyses
+    in the Dispersion of Modern Homo.
+    Papers of the Peabody Museum of Archaeology and Ethnology, vol. 79,
+    pp. 189.
+    Cambridge, Mass.: Peabody Museum.
 
-Howells WW. 1995. Who’s Who in Skulls. Ethnic Identification of Crania from
-Measurements.
-Papers of the Peabody Museum of Archaeology and Ethnology, vol. 82, pp. 108.
-Cambridge, Mass.: Peabody Museum.
+  \item Howells WW. 1995. Who's Who in Skulls. Ethnic Identification of
+    Crania from Measurements.
+    Papers of the Peabody Museum of Archaeology and Ethnology, vol. 82,
+    pp. 108.
+    Cambridge, Mass.: Peabody Museum.
+}
 }
 \seealso{
 Other howells: \code{\link{howelltest}}

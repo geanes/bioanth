@@ -69,7 +69,7 @@
   \item \code{RTMLD}: Right tibia 50\% diaphyseal mediolateral diameter, mm
   \item \code{RTAPD}: Right tibia 50\% diaphyseal anteroposterior
     diameter, mm
-  \item \code{BIB}: Bi‐iliac breadth, mm
+  \item \code{BIB}: Bi-iliac breadth, mm
   \item \code{LIBL}: Left Maximum iliac blade length, mm
   \item \code{RIBL}: Right Maximum iliac blade length, mm
   \item \code{LAcH}: Left maximum acetabular height, mm
@@ -100,13 +100,15 @@ radius), lower limb (femur & tibia), and pelvis were taken.
 }
 \section{Citation}{
 
-Auerbach BM, & Ruff CB. 2004. Human body mass estimation: a comparison
-of “morphometric” and “mechanical” methods.
-American Journal of Physical Anthropology 125:331-342.
+\itemize{
+  \item Auerbach BM, & Ruff CB. 2004. Human body mass estimation:
+    a comparison of "morphometric" and "mechanical" methods.
+    American Journal of Physical Anthropology 125:331-342.
 
-Auerbach BM, & Ruff CB. 2006. Limb bone bilateral asymmetry: variability and
-commonality among modern humans.
-Journal of Human Evolution 50:203-218.
+  \item Auerbach BM, & Ruff CB. 2006. Limb bone bilateral asymmetry:
+    variability and commonality among modern humans.
+    Journal of Human Evolution 50:203-218.
+}
 }
 \keyword{datasets}
 

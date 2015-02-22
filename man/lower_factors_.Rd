@@ -6,6 +6,18 @@
 \usage{
 lower_factors_(.data, ..., .dots, case = "lower")
 }
+\arguments{
+\item{.data}{A data frame.}
+
+\item{...}{Comma separated list of unquoted expressions. Defaults to all
+columns of class factor.}
+
+\item{.dots}{lazy_dots object from \code{lower_factors}.}
+
+\item{case}{A character vector \code{"upper"} or \code{"lower"} (default).
+Note: case must be a named argument if specified
+(e.g. \code{case = "upper"}).}
+}
 \value{
 A data frame.
 }

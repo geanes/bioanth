@@ -6,6 +6,18 @@
 \usage{
 lower_names_(.data, ..., .dots, case = "lower")
 }
+\arguments{
+\item{.data}{A data frame.}
+
+\item{...}{Comma separated list of unquoted expressions. Defaults to all
+columns.}
+
+\item{.dots}{lazy_dots from \code{lower_names}.}
+
+\item{case}{A character vector \code{"upper"} or \code{"lower"} (default).
+Note: case must be a named argument if specified
+(e.g. \code{case = "upper"}).}
+}
 \value{
 A data frame.
 }

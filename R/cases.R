@@ -59,6 +59,13 @@ lower_factors <- function(.data, ..., case = "lower"){
 #' \code{lower_factors}. Dots arguments should be quoted with ~. This function
 #' is mostly for use in programming.
 #' 
+#' @param .data A data frame.
+#' @param ... Comma separated list of unquoted expressions. Defaults to all
+#' columns of class factor.
+#' @param .dots lazy_dots object from \code{lower_factors}.
+#' @param case A character vector \code{"upper"} or \code{"lower"} (default). 
+#' Note: case must be a named argument if specified 
+#' (e.g. \code{case = "upper"}).
 #' @return A data frame.
 #' @examples
 #' lower_factors_(iris, ~Species, case = "upper")
@@ -131,6 +138,13 @@ lower_names <- function(.data, ..., case = "lower"){
 #' Dots arguments should be quoted with ~. This function is mostly for
 #' use in programming.
 #' 
+#' @param .data A data frame.
+#' @param ... Comma separated list of unquoted expressions. Defaults to all
+#' columns.
+#' @param .dots lazy_dots from \code{lower_names}.
+#' @param case A character vector \code{"upper"} or \code{"lower"} (default). 
+#' Note: case must be a named argument if specified 
+#' (e.g. \code{case = "upper"}).
 #' @return A data frame.
 #' @examples
 #' lower_names_(iris, ~Sepal.Length, ~Species)

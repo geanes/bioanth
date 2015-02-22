@@ -100,20 +100,25 @@
 #'   \item \code{TBA}: mm
 #' } 
 #' @section Citation:
-#' Howells WW. 1973. Cranial Variation in Man. A Study by Multivariate Analysis 
-#' of Patterns of Differences Among Recent Human Populations. 
-#' Papers of the Peabody Museum of Archeology and Ethnology, vol. 67, pp. 259. 
-#' Cambridge, Mass.: Peabody Museum.
+#' \itemize{
+#'   \item Howells WW. 1973. Cranial Variation in Man. A Study by Multivariate 
+#'     Analysis of Patterns of Differences Among Recent Human Populations. 
+#'     Papers of the Peabody Museum of Archeology and Ethnology, vol. 67, 
+#'     pp. 259. 
+#'     Cambridge, Mass.: Peabody Museum.
 #' 
-#' Howells WW. 1989. Skull Shapes and the Map. Craniometric Analyses in the 
-#' Dispersion of Modern Homo. 
-#' Papers of the Peabody Museum of Archaeology and Ethnology, vol. 79, pp. 189. 
-#' Cambridge, Mass.: Peabody Museum.
+#'   \item Howells WW. 1989. Skull Shapes and the Map. Craniometric Analyses 
+#'     in the Dispersion of Modern Homo. 
+#'     Papers of the Peabody Museum of Archaeology and Ethnology, vol. 79, 
+#'     pp. 189. 
+#'     Cambridge, Mass.: Peabody Museum.
 #' 
-#' Howells WW. 1995. Who’s Who in Skulls. Ethnic Identification of Crania from 
-#' Measurements. 
-#' Papers of the Peabody Museum of Archaeology and Ethnology, vol. 82, pp. 108. 
-#' Cambridge, Mass.: Peabody Museum.
+#'   \item Howells WW. 1995. Who's Who in Skulls. Ethnic Identification of 
+#'     Crania from Measurements. 
+#'     Papers of the Peabody Museum of Archaeology and Ethnology, vol. 82, 
+#'     pp. 108. 
+#'     Cambridge, Mass.: Peabody Museum.
+#' }
 #' @family howells
 #' @source \url{http://web.utk.edu/~auerbach/HOWL.htm}
 "howell"
@@ -221,20 +226,25 @@
 #'   \item \code{TBA}: mm
 #' }
 #' @section Citation:
-#' Howells WW. 1973. Cranial Variation in Man. A Study by Multivariate Analysis 
-#' of Patterns of Differences Among Recent Human Populations. 
-#' Papers of the Peabody Museum of Archeology and Ethnology, vol. 67, pp. 259. 
-#' Cambridge, Mass.: Peabody Museum.
+#' \itemize{
+#'   \item Howells WW. 1973. Cranial Variation in Man. A Study by Multivariate 
+#'     Analysis of Patterns of Differences Among Recent Human Populations. 
+#'     Papers of the Peabody Museum of Archeology and Ethnology, vol. 67, 
+#'     pp. 259. 
+#'     Cambridge, Mass.: Peabody Museum.
 #' 
-#' Howells WW. 1989. Skull Shapes and the Map. Craniometric Analyses in the 
-#' Dispersion of Modern Homo. 
-#' Papers of the Peabody Museum of Archaeology and Ethnology, vol. 79, pp. 189. 
-#' Cambridge, Mass.: Peabody Museum.
+#'   \item Howells WW. 1989. Skull Shapes and the Map. Craniometric Analyses 
+#'     in the Dispersion of Modern Homo. 
+#'     Papers of the Peabody Museum of Archaeology and Ethnology, vol. 79, 
+#'     pp. 189. 
+#'     Cambridge, Mass.: Peabody Museum.
 #' 
-#' Howells WW. 1995. Who’s Who in Skulls. Ethnic Identification of Crania from 
-#' Measurements. 
-#' Papers of the Peabody Museum of Archaeology and Ethnology, vol. 82, pp. 108. 
-#' Cambridge, Mass.: Peabody Museum.
+#'   \item Howells WW. 1995. Who's Who in Skulls. Ethnic Identification of 
+#'     Crania from Measurements. 
+#'     Papers of the Peabody Museum of Archaeology and Ethnology, vol. 82, 
+#'     pp. 108. 
+#'     Cambridge, Mass.: Peabody Museum.
+#' }
 #' @family howells
 #' @source \url{http://web.utk.edu/~auerbach/HOWL.htm}
 "howelltest"
@@ -315,7 +325,7 @@
 #'   \item \code{RTMLD}: Right tibia 50\% diaphyseal mediolateral diameter, mm
 #'   \item \code{RTAPD}: Right tibia 50\% diaphyseal anteroposterior 
 #'     diameter, mm
-#'   \item \code{BIB}: Bi‐iliac breadth, mm
+#'   \item \code{BIB}: Bi-iliac breadth, mm
 #'   \item \code{LIBL}: Left Maximum iliac blade length, mm
 #'   \item \code{RIBL}: Right Maximum iliac blade length, mm
 #'   \item \code{LAcH}: Left maximum acetabular height, mm
@@ -330,12 +340,14 @@
 #'   \item \code{AVG.FHD}
 #' }
 #' @section Citation:
-#' Auerbach BM, & Ruff CB. 2004. Human body mass estimation: a comparison 
-#' of “morphometric” and “mechanical” methods. 
-#' American Journal of Physical Anthropology 125:331-342.
+#' \itemize{
+#'   \item Auerbach BM, & Ruff CB. 2004. Human body mass estimation: 
+#'     a comparison of "morphometric" and "mechanical" methods.
+#'     American Journal of Physical Anthropology 125:331-342.
 #' 
-#' Auerbach BM, & Ruff CB. 2006. Limb bone bilateral asymmetry: variability and 
-#' commonality among modern humans. 
-#' Journal of Human Evolution 50:203-218.
+#'   \item Auerbach BM, & Ruff CB. 2006. Limb bone bilateral asymmetry: 
+#'     variability and commonality among modern humans. 
+#'     Journal of Human Evolution 50:203-218.
+#' }
 #' @source \url{http://web.utk.edu/~auerbach/GOLD.htm}
 "goldman"
